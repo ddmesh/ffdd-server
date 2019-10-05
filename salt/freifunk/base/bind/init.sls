@@ -17,7 +17,8 @@ bind:
       - file: /etc/bind/named.conf
       - file: /etc/bind/named.conf.options
       - file: /etc/bind/named.conf.default-zones
-      - file: /etc/bind/vpn.forwarder
+      - file: /etc/bind/named.conf.local
+      - file: /etc/bind/zones
     - require:
       - pkg: bind
       - service: S40network
@@ -70,6 +71,29 @@ bind:
     - mode: 644
     - require:
       - pkg: bind
+
+/etc/bind/named.conf.local:
+  file.managed:
+    - source:
+      - salt://bind/etc/bind/named.conf.local
+    - user: root
+    - group: root
+    - mode: 644
+    - require:
+      - pkg: bind
+
+{# Zone files #}
+/etc/bind/zones:
+  file.recurse:
+    - source:
+      - salt://bind/etc/bind/zones
+    - user: root
+    - group: root
+    - file_mode: 755
+    - dir_mode: 755
+    - recurse:
+      - user
+      - group
 
 {# check root.hints are up-to-date #}
 /etc/bind/db.root:

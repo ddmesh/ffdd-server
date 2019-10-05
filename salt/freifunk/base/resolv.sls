@@ -11,7 +11,6 @@ pkg_resolvconf:
   file.managed:
     - contents: |
         search ffdd
-        nameserver 10.200.0.4
         nameserver 127.0.0.1
     - user: root
     - group: root

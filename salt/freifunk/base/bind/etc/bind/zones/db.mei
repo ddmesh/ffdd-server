@@ -1,0 +1,58 @@
+;; ### This file managed by Salt, do not edit by hand! ###
+;;
+;; db.mei
+;; Forwardlookupzone für mei
+;;
+$TTL 28800
+@       IN  SOA ns1.ffdd. root.mei. (
+                1566853510 ; Serial
+                10800 ; Refresh
+                3600 ; Retry
+                604800 ; Expire
+                28800 ) ; Negative Cache TTL
+;
+@       IN  NS      ns1.ffdd.
+@       IN  MX  10  mail.freifunk-dresden.de.
+;
+@       IN  A       10.200.0.4
+;
+;; NTP servers
+ntp1    IN  CNAME   ntp1.ffdd.
+;
+;; Gateways
+vpn1    IN  CNAME   vpn1.ffdd.
+vpn2    IN  CNAME   vpn2.ffdd.
+vpn3    IN  CNAME   vpn3.ffdd.
+vpn4    IN  CNAME   vpn4.ffdd.
+vpn5    IN  CNAME   vpn5.ffdd.
+vpn6    IN  CNAME   vpn6.ffdd.
+vpn7    IN  CNAME   vpn7.ffdd.
+vpn8    IN  CNAME   vpn8.ffdd.
+vpn9    IN  CNAME   vpn9.ffdd.
+vpn10   IN  CNAME   vpn10.ffdd.
+vpn11   IN  CNAME   vpn11.ffdd.
+vpn12   IN  CNAME   vpn12.ffdd.
+vpn13   IN  CNAME   vpn13.ffdd.
+vpn14   IN  CNAME   vpn14.ffdd.
+vpn15   IN  CNAME   vpn15.ffdd.
+;
+;; Dienste
+hotspot IN  A       100.64.0.1
+geoloc  IN  A       10.200.0.1
+speedtest IN A      10.200.200.26
+;
+api     IN  CNAME   api.freifunk-dresden.de.
+blog    IN  CNAME   blog.freifunk-dresden.de.
+chat    IN  CNAME   chat.freifunk-dresden.de.
+cloud   IN  CNAME   cloud.freifunk-dresden.de.
+download IN CNAME   download.freifunk-dresden.de.
+forum   IN  CNAME   forum.freifunk-dresden.de.
+git     IN  CNAME   git.freifunk-dresden.de.
+irc     IN  CNAME   irc.freifunk-dresden.de.
+lists   IN  CNAME   lists.freifunk-dresden.de.
+mail    IN  CNAME   mail.freifunk-dresden.de.
+maps    IN  CNAME   maps.freifunk-dresden.de.
+mumble  IN  CNAME   mumble.freifunk.net.
+stats   IN  CNAME   stats.freifunk-dresden.de.
+wiki    IN  CNAME   wiki.freifunk-dresden.de.
+www     IN  CNAME   www.freifunk-dresden.de.

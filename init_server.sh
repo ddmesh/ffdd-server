@@ -2,7 +2,7 @@
 #version="1.0.10"
 #branch="B_RELEASE"
 #fix=""
-tag="T_RELEASE_latest"
+tag="T_DNS_latest"
 ###
 #
 #  Freifunk Dresden Server - Installation & Update Script
